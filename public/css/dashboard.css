@@ -1,0 +1,194 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    padding: 15px;
+    z-index: 1030;
+}
+.navbar .toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+.navbar .profile-dropdown {
+position: relative;
+display: inline-block;
+margin-left: auto;
+}
+
+.navbar .profile-dropdown img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.navbar .dropdown-menu {
+position: absolute;
+top: 50px; /* Adjust the position below the profile */
+right: 0;
+background-color: white;
+display: none; /* Keep it hidden initially */
+border-radius: 4px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+z-index: 1000; /* Ensure the dropdown is on top */
+}
+
+.navbar .dropdown-menu a {
+display: block;
+padding: 8px 16px;
+text-decoration: none;
+color: black;
+}
+
+.navbar .dropdown-menu a:hover {
+background-color: #f1f1f1; /* Hover effect on dropdown items */
+}
+
+
+/* Sidebar Styles */
+#sidebar {
+            top: 60px;
+            left: 0;
+            bottom: 0;
+            width: 250px;
+            z-index: 996;
+            transition: all 0.3s;
+            padding: 20px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #aab7cf transparent;
+            box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+            background-color: #fff;
+            position: fixed;
+            height: 100vh;
+
+}
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+#sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+#sidebar ul li:hover {
+    background-color: #495057;
+}
+#sidebar ul li i {
+    margin-right: 10px;
+}
+
+/* Hide sidebar completely on small screens */
+@media (max-width: 768px) {
+    #sidebar {
+        top: 0;
+        margin-left: -250px;
+    }
+    .sidebar-show {
+        margin-left: 0 !important;
+    }
+    .content {
+        margin-left: 0 !important;
+    }
+}
+
+/* Full width Navbar on large screens */
+.content {
+    padding: 20px 30px;
+    margin-left: 250px;
+    margin-top: 60px; /* Adds space for navbar height */
+    transition: all 0.3s;
+}
+/* Sidebar hidden for large screens when not toggled */
+.sidebar-hidden {
+    margin-left: -250px !important;
+}
+
+/* Full width when sidebar is hidden */
+.full-width {
+    margin-left: 0 !important;
+}
+
+/* Overlay effect for small screens */
+@media (max-width: 768px) {
+    #sidebar.sidebar-show {
+        position: absolute;
+        z-index: 1000;
+    }
+}
+
+
+.navbar{
+    transition: all 0.5s;
+    z-index: 997;
+    height: 60px;
+    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    background-color: #fff;
+    padding-left: 20px;
+    color : black;
+        }
+ .navbar  .toggle-btn{
+    color : black;
+    font-size : 1.5rem;
+    
+ }   
+ 
+ 
+  /* Overlay styles for small screens */
+.sidebar-overlay {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.5);
+z-index: 10; /* Ensure it appears above other content */
+}
+
+/* Show overlay when sidebar is visible on small screens */
+.sidebar-show + .sidebar-overlay {
+display: block;
+}
+
+/* Content styles */
+.full-width {
+width: 100%; /* Full-width content when sidebar is hidden */
+}
+
+
+/* multi step form */
+.step-headers {
+    border-bottom: 2px solid #ddd;
+}
+.step-header {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #666;
+}
+.step-header.active {
+    color: #007bff; /* Blue color for active step */
+    border-bottom: 2px solid #007bff;
+}
+/* multi step form */
+.propertises-card img{
+    height: 100%;
+    width: auto;
+}
+
