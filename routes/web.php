@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\PropertyFilterController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -53,6 +54,15 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
 
 
+
+    });
+
+});
+
+Route::prefix('properties')->group(function () {
+    Route::controller(PropertyFilterController::class)->group(function(){
+        Route::get('/lists', 'propertieslists')->name('properties.lists'); 
+        
 
     });
 
