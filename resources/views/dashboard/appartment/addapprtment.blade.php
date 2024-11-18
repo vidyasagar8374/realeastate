@@ -1,6 +1,39 @@
 @extends('dashboard.basedashbord')
 
 @section('title', 'addproperties')
+<style>
+    .next-step{
+        background: orange !important;
+        border: none !important;
+        padding: 10px 30px !important;
+        border-radius: 10px !important;
+        float: right !important;
+        margin: 10px 0px !important;
+        color: #fff !important;
+    }
+    .next-step1{
+        background: orange !important;
+        border: none !important;
+        padding: 10px 30px !important;
+        border-radius: 10px !important;
+        float: right !important;
+        margin: 10px 0px !important;
+        color: #fff !important;
+    }
+    .next-step2{
+        background: orange !important;
+        border: none !important;
+        padding: 10px 30px !important;
+        border-radius: 10px !important;
+        float: right !important;
+        margin: 10px 0px !important;
+        color: #fff !important;
+        margin-left: 5px !important;
+    }
+    .heading{
+        color: orange !important;
+    }
+</style>
 
 @section('content')
             <!-- Main Content -->
@@ -23,34 +56,51 @@
                 <form id="multiStepForm">
                     <!-- Step 1 -->
                     <div class="form-step">
-                        <h4>Basic Information</h4>
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
+                        <h4 class="heading">Basic Information</h4>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" mailto:placeholder="name@example.com">
+                            <label for="floatingInput">Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Description</label>
                         </div>
                         <button type="button" class="btn btn-primary next-step">Next</button>
                     </div>
+                   
             
                     <!-- Step 2 -->
                     <div class="form-step d-none">
-                        <h4>Address</h4>
-                        <div class="form-group">
-                            <label for="address">Address:</label>
-                            <input type="text" class="form-control" id="address" name="address" required>
+                        <h4 class="heading">Address</h4>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="address" id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea">Address</label>
                         </div>
-                        <button type="button" class="btn btn-secondary prev-step">Previous</button>
-                        <button type="button" class="btn btn-primary next-step">Next</button>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Neighborhood/Community Name</label>
+                        </div>
+                        <div class="form-floating mt-4">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Nearby Landmarks</label>
+                        </div>
+                        <button type="button" class="btn btn-primary next-step1">Next</button>
+                        <button type="button" class="btn btn-primary next-step2">Previous</button>
                     </div>
             
                     <!-- Step 3 -->
                     <div class="form-step d-none">
-                        <h4>Uploads</h4>
-                        <div class="form-group">
-                            <label for="file">Upload File:</label>
-                            <input type="file" class="form-control" id="file" name="file" required>
+                        <h4 class="heading">Uploads</h4>
+                        <div class="form-floating mt-4">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Upload Images</label>
                         </div>
-                        <button type="button" class="btn btn-secondary prev-step">Previous</button>
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <div class="form-floating mt-4">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Virtual Tour/Video</label>
+                        </div>
+                        <button type="button" class="next-step1">Previous</button>
+                        <button type="submit" class="next-step2">Submit</button>
                     </div>
                 </form>
                 <div id="loading" class="text-center d-none mt-3">
