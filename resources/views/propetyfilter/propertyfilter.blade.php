@@ -78,7 +78,7 @@
 
             .listing-card {
                 margin-bottom: 5px;
-                height: 233px;
+                height: 234px;
             }
             .listing-card-placeholder{
               margin-bottom: 1px;
