@@ -9,7 +9,7 @@
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">{{ $data->title }}</h5>
-                <p class="card-text">{{ $data->subtitle }}</p>
+                <p >{{ $data->subtitle }}</p>
                 <!-- Price and EMI -->
                 <div class="price-section">
                     <div>
@@ -27,7 +27,7 @@
                 </div>
 
                 <!-- Property Details -->
-                <div class="details-section mt-1">
+                <div class="details-section mt-1 mb-1">
                     <div>
                         <strong><i class="bi bi-compass"></i> East</strong><br />
                         Facing
@@ -47,9 +47,9 @@
                 </div>
 
                 <!-- Action Button -->
-                <div class="mt-1">
-                    <a href="#" class="btn btn-danger">Get Owner Details</a>
-                    <a href="#" class="btn btn-outline-secondary">Join Visit</a>
+                <div class="action-section mb-1">
+                    <a href="#" class="btn btn-danger btn-sm">Get Owner Details</a>
+                    <a href="#" class="btn btn-outline-secondary btn-sm">Join Visit</a>
                 </div>
             </div>
         </div>
