@@ -45,12 +45,10 @@
           <div class="card-body">
             <!-- Step Headers -->
             <div class="step-headers d-flex justify-content-between mb-4">
-              <div class="step-header active" data-step="0">Basic Information</div>
-              <div class="step-header" data-step="1">Address</div>
-              <div class="step-header" data-step="2">Uploads</div>
+              <div class="step-header active">Basic Information</div>
             </div>
             <!-- Form -->
-            <form id="multiStepForm" method="POST" action="{{ route('store') }}">
+            <form id="multiStepForm" method="POST" action="{{ route('admin.storeproperties') }}">
              @csrf
               <!-- Step 1 -->
               <div class="form-step">
@@ -96,8 +94,6 @@
 
                   <div class="col-lg-4">
                     <div class="form-floating mb-3">
-                      
-                    
                       <select class="form-control" id="country" name="country">
                           <option value="" disabled selected>Select State</option>
                           <option value="United States">United States</option>
@@ -225,40 +221,12 @@
                     </div>
                   </div>
                 </div>
-                <button type="button" class="btn btn-primary next-step">Next</button>
+              
               </div>
               <!-- Step 2 -->
-              <div class="form-step d-none">
-                <h4 class="heading">Address</h4>
-                <div class="form-floating mb-3">
-                  <textarea class="form-control" placeholder="address" id="floatingTextarea"></textarea>
-                  <label for="floatingTextarea">Address</label>
-                </div>
-                <div class="form-floating">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                  <label for="floatingPassword">Neighborhood/Community Name</label>
-                </div>
-                <div class="form-floating mt-4">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                  <label for="floatingPassword">Nearby Landmarks</label>
-                </div>
-                <button type="button" class="btn btn-primary next-step1">Next</button>
-                <button type="button" class="btn btn-primary next-step2">Previous</button>
-              </div>
+             
               <!-- Step 3 -->
-              <div class="form-step d-none">
-                <h4 class="heading">Uploads</h4>
-                <div class="form-floating mt-4">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                  <label for="floatingPassword">Upload Images</label>
-                </div>
-                <div class="form-floating mt-4">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                  <label for="floatingPassword">Virtual Tour/Video</label>
-                </div>
-                <button type="button" class="next-step1">Previous</button>
-                <button type="submit" class="next-step2">Submit</button>
-              </div>
+             <button type="submit" class="btn btn-primary d-flex justify-content-end">Submint</button>
             </form>
             <div id="loading" class="text-center d-none mt-3">
               <img src="https://i.sstatic.net/kOnzy.gif" alt="Loading..." style="width: 50px; height: 50px;">

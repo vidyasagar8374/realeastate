@@ -23,29 +23,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::post('/storeproperties',  'storeproperties')->name('admin.storeproperties');
 
         // create posts
-        Route::get('/createpost', 'createpost')->name('admin.createpost'); 
-        Route::post('/savepost', 'savepost')->name('admin.savepost'); 
-        Route::get('/getposts',  'getposts')->name('admin.getposts');  
-        Route::get('/viewpost/{id}',  'viewpost')->name('admin.viewpost');  
-        Route::post('/updatepost',  'updatepost')->name('admin.updatepost');  
-        Route::delete('/posts/delete/{id}',  'destroypost')->name('admin.destroypost');  
-        // get post
-        
-        //create youtube 
-        Route::get('/createyoutube', 'createyoutube')->name('admin.createyoutube'); 
-        Route::post('/saveyoutube', 'saveyoutube')->name('admin.saveyoutube'); 
-        Route::get('/getyoutube',  'getyoutube')->name('admin.getyoutube'); 
-        Route::get('/viewyoutube/{id}',  'viewyoutube')->name('admin.viewyoutube');  
-        Route::post('/updateyoutube',  'updateyoutube')->name('admin.updateyoutube');  
-        Route::delete('/youtube/delete/{id}',  'destroyotube')->name('admin.destroyotube');  
-
-        //create ParishPrist
-        Route::get('/createparishprist', 'createparishprist')->name('admin.createparishprist'); 
-        Route::post('/saveparishprist', 'saveparishprist')->name('admin.saveparishprist'); 
-        Route::get('/parishpristlist',  'parishpristlist')->name('admin.parishpristlist'); 
-        // Route::get('/viewyoutube/{id}',  'viewyoutube')->name('admin.viewyoutube');  
-        // Route::post('/updateyoutube',  'updateyoutube')->name('admin.updateyoutube');  
-        // Route::delete('/youtube/delete/{id}',  'destroyotube')->name('admin.destroyotube'); 
+  
      
 
 

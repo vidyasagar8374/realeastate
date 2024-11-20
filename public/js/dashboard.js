@@ -46,67 +46,67 @@ document.addEventListener('click', function(event) {
 
 // multi step form
 
-$(document).ready(function() {
-    let currentStep = 0;
-    const steps = $(".form-step");
-    const headers = $(".step-header");
-    const loading = $("#loading");
+// $(document).ready(function() {
+//     let currentStep = 0;
+//     const steps = $(".form-step");
+//     const headers = $(".step-header");
+//     const loading = $("#loading");
 
-    function showStep(step) {
-      // Show the current step
-      steps.addClass("d-none");
-      steps.eq(step).removeClass("d-none");
+//     function showStep(step) {
+//       // Show the current step
+//       steps.addClass("d-none");
+//       steps.eq(step).removeClass("d-none");
 
-      // Update the active header
-      headers.removeClass("active");
-      headers.eq(step).addClass("active");
-    }
+//       // Update the active header
+//       headers.removeClass("active");
+//       headers.eq(step).addClass("active");
+//     }
 
-    $(".next-step").click(function() {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        showStep(currentStep);
-      }
-    });
+//     $(".next-step").click(function() {
+//       if (currentStep < steps.length - 1) {
+//         currentStep++;
+//         showStep(currentStep);
+//       }
+//     });
 
-    $(".prev-step").click(function() {
-      if (currentStep > 0) {
-        currentStep--;
-        showStep(currentStep);
-      }
-    });
+//     $(".prev-step").click(function() {
+//       if (currentStep > 0) {
+//         currentStep--;
+//         showStep(currentStep);
+//       }
+//     });
 
-    $("#multiStepForm").submit(function(event) {
-      event.preventDefault();
-      // Show the loading GIF
-      loading.removeClass("d-none");
+    // $("#multiStepForm").submit(function(event) {
+    //   event.preventDefault();
+    //   // Show the loading GIF
+    //   loading.removeClass("d-none");
 
-      // Collect form data
-      const formData = $(this).serialize();
-      console.log("Form Data Submitted:", formData);
+    //   // Collect form data
+    //   const formData = $(this).serialize();
+    //   console.log("Form Data Submitted:", formData);
 
-      // Simulate an AJAX call with a delay for demonstration
-      $.ajax({
-        url: 'your-server-endpoint',
-        method: 'POST',
-        data: formData,
-        success: function(response) {
-          alert("Form submitted successfully!");
-        },
-        error: function(error) {
-          alert("Error submitting form!");
-        },
-        complete: function() {
-          // Hide the loading GIF when the AJAX call is complete
-          loading.addClass("d-none");
-        }
-      });
-    });
+    //   // Simulate an AJAX call with a delay for demonstration
+    //   $.ajax({
+    //     url: 'your-server-endpoint',
+    //     method: 'POST',
+    //     data: formData,
+    //     success: function(response) {
+    //       alert("Form submitted successfully!");
+    //     },
+    //     error: function(error) {
+    //       alert("Error submitting form!");
+    //     },
+    //     complete: function() {
+    //       // Hide the loading GIF when the AJAX call is complete
+    //       loading.addClass("d-none");
+    //     }
+    //   });
+    // });
 
     // Click event on headers to navigate directly
-    headers.click(function() {
-      const step = $(this).data("step");
-      currentStep = step;
-      showStep(currentStep);
-    });
+    // headers.click(function() {
+    //   const step = $(this).data("step");
+    //   currentStep = step;
+    //   showStep(currentStep);
+    // });
   });
