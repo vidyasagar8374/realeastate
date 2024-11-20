@@ -45,7 +45,8 @@ class adminController extends Controller
             //     'estimated_emi' => 'nullable|numeric|min:1',
                 
             // ]);
-
+                // save file in folder 
+ 
             if($request->hasFile('property_sm_img')) {
                 $image = $request->file('property_sm_img');
                 $imgaename = time() . '.' . $image->getClientOriginalExtension();
