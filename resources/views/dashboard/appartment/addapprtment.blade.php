@@ -48,7 +48,7 @@
               <div class="step-header active">Basic Information</div>
             </div>
             <!-- Form -->
-            <form id="multiStepForm" method="POST" action="{{ route('admin.storeproperties') }}">
+            <form id="multiStepForm" method="POST" action="{{ route('admin.storeproperties') }}" enctype="multipart/form-data">
              @csrf
               <!-- Step 1 -->
               <div class="form-step">
@@ -147,16 +147,16 @@
                     <div class="form-floating mb-3">
                     <select class="form-control" id="country" name="country">
                           <option value="" disabled selected>Select Locality</option>
-                          <option value="United States">United States</option>
-                          <option value="Canada">Canada</option>
-                          <option value="United Kingdom">United Kingdom</option>
-                          <option value="India">India</option>
-                          <option value="Australia">Australia</option>
-                          <option value="Germany">Germany</option>
-                          <option value="France">France</option>
-                          <option value="Japan">Japan</option>
-                          <option value="China">China</option>
-                          <option value="Brazil">Brazil</option>
+                          <option value="1">United States</option>
+                          <option value="2">Canada</option>
+                          <option value="3">United Kingdom</option>
+                          <option value="4">India</option>
+                          <option value="5">Australia</option>
+                          <option value="6">Germany</option>
+                          <option value="7">France</option>
+                          <option value="8">Japan</option>
+                          <option value="9">China</option>
+                          <option value="10">Brazil</option>
                         </select>
                     </div>
                   </div>
@@ -218,6 +218,12 @@
                     <div class="form-floating mb-3">
                       <input type="text" id="estimated_emi" name="estimated_emi" value="{{ old('estimated_emi') }}" class="form-control" id="floatingtext" placeholder="Description">
                       <label for="floatingPassword">Estimated Emi</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="form-floating mb-3">
+                      <input type="file" id="estimated_emi" name="property_sm_img" value="{{ old('property_sm_img') }}" class="form-control" id="floatingtext" placeholder="Upload file">
+                      <label for="floatingPassword">SM IMage</label>
                     </div>
                   </div>
                 </div>
