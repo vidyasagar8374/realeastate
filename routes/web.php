@@ -20,7 +20,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::post('/updatebanner',  'updatebanner')->name('admin.banners.update');  // update banner
         Route::get('/bannerview/{id}',  'bannerview')->name('admin.banners.view');  // update banner
         Route::delete('/banners/delete/{id}', 'destroybanner')->name('admin.banners.delete');  // delete banner
-        Route::post('/store', [adminController::class, 'store'])->name('store');
+        Route::post('/storeproperties',  'storeproperties')->name('admin.storeproperties');
 
         // create posts
         Route::get('/createpost', 'createpost')->name('admin.createpost'); 

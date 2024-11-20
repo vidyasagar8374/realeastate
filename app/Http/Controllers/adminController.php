@@ -16,9 +16,9 @@ class adminController extends Controller
         return view('dashboard/appartment.addapprtment');
     }
 
-    public function store(Request $request)
+    public function storeproperties(Request $request)
     {
-        dd($request);
+        // dd($request);
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'subtitle' => 'nullable|string|max:255',

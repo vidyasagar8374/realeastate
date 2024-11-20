@@ -18,7 +18,7 @@ class PropertyFilterController extends Controller
                 $query->whereIn('bedrooms', $request->bhk);
             }
          
-            // Retrieve the filtered results
+            // Retrieve the filtered results for json databas
             $properties = $query->get();
             if ($request->ajax()) {
                 return response()->json([
