@@ -32,5 +32,8 @@ class PropertyFilterController extends Controller
         }
             
     }
+    public function singleproperty(Request $request){
+        return view('propetyfilter.property_single');
+    }
     
 }

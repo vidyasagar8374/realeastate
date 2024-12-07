@@ -1,9 +1,13 @@
 @foreach($properties as $data)
+
 <div class="card listing-card">
     <div class="row">
         <!-- Image Section -->
+
         <div class="col-md-4 property-image">
+        <a href="{{ route('properties.singleproperty') }}">
             <img src="{{  asset($data->property_sm_img)  }}" alt="Property Image" class="img-fluid rounded" />
+        </a>
         </div>
         <!-- Details Section -->
         <div class="col-md-8">

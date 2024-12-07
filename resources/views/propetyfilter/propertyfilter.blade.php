@@ -199,7 +199,9 @@
                 background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
                 z-index: 999; /* Below sidebar */
             }
-        </style>
+
+                
+</style>
     </head>
     <body>
         <div class="container-fluid">

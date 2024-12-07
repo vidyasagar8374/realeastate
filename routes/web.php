@@ -35,6 +35,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 Route::prefix('properties')->group(function () {
     Route::controller(PropertyFilterController::class)->group(function(){
         Route::get('/lists', 'propertieslists')->name('properties.lists'); 
+        Route::get('/single-property', 'singleproperty')->name('properties.singleproperty'); 
         
 
     });
