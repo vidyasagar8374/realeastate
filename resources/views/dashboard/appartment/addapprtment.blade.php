@@ -1,41 +1,10 @@
-@extends('dashboard.basedashbord') @section('title', 'addproperties') <style>
-  .next-step {
-    background: orange !important;
-    border: none !important;
-    padding: 10px 30px !important;
-    border-radius: 10px !important;
-    float: right !important;
-    margin: 10px 0px !important;
-    color: #fff !important;
-  }
-
-  .next-step1 {
-    background: orange !important;
-    border: none !important;
-    padding: 10px 30px !important;
-    border-radius: 10px !important;
-    float: right !important;
-    margin: 10px 0px !important;
-    color: #fff !important;
-  }
-
-  .next-step2 {
-    background: orange !important;
-    border: none !important;
-    padding: 10px 30px !important;
-    border-radius: 10px !important;
-    float: right !important;
-    margin: 10px 0px !important;
-    color: #fff !important;
-    margin-left: 5px !important;
-  }
-
-  .heading {
-    color: orange !important;
-  }
-</style> @section('content')
+@extends('dashboard.basedashbord') @section('title', 'addproperties') 
+ @section('content')
 <!-- Main Content -->
 <div class="content">
+  <div id="loading" class="text-center d-none mt-3">
+    <img src="https://i.sstatic.net/kOnzy.gif" alt="Loading..." style="width: 50px; height: 50px;">
+  </div>
   <h1>Add Appartment</h1>
   <!-- Start content Appartments-->
   <div class="container mt-5">
@@ -44,19 +13,18 @@
         <div class="card-header">
           <div class="card-body">
             <!-- Step Headers -->
-            <div class="step-headers d-flex justify-content-between mb-4">
-              <div class="step-header active">Basic Information</div>
+            <div class="mb-4">
+              <div class="step-header">Basic Information</div>
             </div>
             <!-- Form -->
             <form id="multiStepForm" method="POST" action="{{ route('admin.storeproperties') }}" enctype="multipart/form-data">
              @csrf
               <!-- Step 1 -->
               <div class="form-step">
-                <h4 class="heading">Basic Information</h4>
                 <div class="row">
                   <div class="col-lg-4">
                     <div class="form-floating mb-3">
-                      <input type="text" id="title" name="title"  value="{{ old('title') }}"  class="form-control" id="floatingInput" mailto:placeholder="name@example.com">
+                      <input type="text" id="title" name="title"  value="{{ old('title') }}"  class="form-control" id="floatingInput" placeholder="title">
                       <label for="floatingInput">Title</label>
                     </div>
                   </div>
@@ -229,14 +197,9 @@
                 </div>
               
               </div>
-              <!-- Step 2 -->
-             
-              <!-- Step 3 -->
              <button type="submit" class="btn btn-primary d-flex justify-content-end">Submint</button>
             </form>
-            <div id="loading" class="text-center d-none mt-3">
-              <img src="https://i.sstatic.net/kOnzy.gif" alt="Loading..." style="width: 50px; height: 50px;">
-            </div>
+           
           </div>
         </div>
       </div>

@@ -109,4 +109,4 @@ document.addEventListener('click', function(event) {
     //   currentStep = step;
     //   showStep(currentStep);
     // });
-  });
+//   });

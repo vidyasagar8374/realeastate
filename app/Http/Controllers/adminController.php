@@ -96,8 +96,13 @@ class adminController extends Controller
         }
  
     }
+    public function keys()
+    {
+         return view('dashboard/propertiesfeature.addkeys');
+    }
     public function addkeys(Request $request)
     {
+        dd($request);
         $values = $request->input('value', []); // Default to empty array if null
         $keys = $request->input('key', []);     // Default to empty array if null
     
@@ -107,12 +112,13 @@ class adminController extends Controller
     
         foreach ($values as $index => $value) {
             Key::create([
+                'key' => $keys[$index] ?? null,
                 'value' => $value,
-                'key' => $keys[$index] ?? null, // Handle mismatched array lengths
+                
             ]);
         }
     
-        return view('dashboard/appartment.addkeys');
+        return view('dashboard/propertiesfeature.addkeys',with(['success' => 'Keys added successfully.']));
     }
     
     
