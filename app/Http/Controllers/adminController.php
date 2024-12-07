@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Propertie;
+use App\Models\Key;
 use Illuminate\Support\Facades\DB;
 
 class adminController extends Controller
@@ -93,11 +94,26 @@ class adminController extends Controller
             DB::rollBack();
             return redirect()->route('admin.addproperty')->with('error', 'Property not added successfully. Error: ' . $e->getMessage());
         }
-        
-        
-  
-
-     
  
     }
+    public function addkeys(Request $request)
+    {
+        $values = $request->input('value', []); // Default to empty array if null
+        $keys = $request->input('key', []);     // Default to empty array if null
+    
+        if (!is_array($values) || !is_array($keys)) {
+            return redirect()->back()->withErrors('Invalid input data.');
+        }
+    
+        foreach ($values as $index => $value) {
+            Key::create([
+                'value' => $value,
+                'key' => $keys[$index] ?? null, // Handle mismatched array lengths
+            ]);
+        }
+    
+        return view('dashboard/appartment.addkeys');
+    }
+    
+    
 }

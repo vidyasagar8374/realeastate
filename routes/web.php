@@ -21,17 +21,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('/bannerview/{id}',  'bannerview')->name('admin.banners.view');  // update banner
         Route::delete('/banners/delete/{id}', 'destroybanner')->name('admin.banners.delete');  // delete banner
         Route::post('/storeproperties',  'storeproperties')->name('admin.storeproperties');
+        Route::post('/addkeys',  'addkeys')->name('admin.addkeys'); 
 
         // create posts
-  
-     
-
 
         Route::get('/contactlist', 'contactlist')->name('admin.contactlist'); 
-
-
-
-
 
     });
 
