@@ -114,10 +114,11 @@ class adminController extends Controller
             Key::create([
                 'key' => $keys[$index] ?? null,
                 'value' => $value,
+                'property_id' => $request->input('property_id'),
                 
             ]);
         }
-    
+
         return view('dashboard/propertiesfeature.addkeys',with(['success' => 'Keys added successfully.']));
     }
     public function propetiyindex(Request $request){
