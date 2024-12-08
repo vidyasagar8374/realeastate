@@ -25,6 +25,15 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::post('/addkeys',  'addkeys')->name('admin.addkeys'); 
         Route::get('/propetyindex', 'propetiyindex')->name('properties.propetiyindex'); 
 
+        Route::get('/Amenties' ,  'Amenties')->name('admin.Amenties');
+        Route::post('/addamenties' ,  'storeAmenties')->name('admin.storeAmenties');
+
+        Route::get('/floorplans' ,  'floorplans')->name('admin.floorplans');
+        Route::post('/addfloorplans' ,  'storeFloorplans')->name('admin.storeFloorplans');
+
+        Route::get('/media' ,  'media')->name('admin.media');
+        Route::post('/addmedia' ,  'storeMedia')->name('admin.storeMedia');
+
         // create posts
 
         Route::get('/contactlist', 'contactlist')->name('admin.contactlist'); 

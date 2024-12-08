@@ -14,4 +14,9 @@ class Propertie extends Model
         'no_floors', 'parking', 'estimated_emi'
     ];
 
+    public function specifications()
+    {
+        return $this->hasMany(Specifications::class, 'property_id', 'id');
+    }
+
 }

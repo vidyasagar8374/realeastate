@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Propertie;
-use App\Models\Key;
+use App\Models\Specifications;
+use App\Models\Amenties;
+use App\Models\Media;
+use App\Models\Floorplans;
 use Illuminate\Support\Facades\DB;
 
 class adminController extends Controller
@@ -125,6 +128,90 @@ class adminController extends Controller
         return view('dashboard.propertiesblock.propertiesindex',compact('properties'));
     }
     
+    public function Amenties()
+    {
+         return view('dashboard/propertiesfeature.addamenties');
+    }
+    
+ // instert and  save amenties featues in the database
+ public function storeAmenties(Request $request)
+{
+    
+    $amenties = new Amenties();
+    $amenties->name = $request->input('name');  
+    $amenties->icon = $request->input('icon');  
+    $amenties->save();
+
+    
+    return view('dashboard/propertiesfeature.addamenties', [
+        'success' => 'Amenities added successfully.',
+        'amenties' => $amenties 
+    ]);
+}
+
+public function floorplans()
+{
+     return view('dashboard/propertiesfeature.addfloors');
+}
+
+public function storeFloorplans(Request $request)
+{
+    if ($request->hasFile('image')) {
+        
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $imagePath = $image->storeAs('images', $imageName, 'public');
+        
+       
+        $floorplans = new Floorplans();
+        $floorplans->title = $request->input('title');
+        $floorplans->subtitle = $request->input('subtitle');
+        $floorplans->price = $request->input('price');
+        $floorplans->imagepath = $imagePath; 
+        $floorplans->save();
+    }
+
+    
+    return view('dashboard/propertiesfeature.addfloors', [
+        'success' => 'Floorplans added successfully.',
+        'floorplans' => $floorplans,
+    ]);
+}
+
+public function media()
+{
+     return view('dashboard/propertiesfeature.addmedia');
+}
+// insert video and images in the database
+public function storeMedia(Request $request)
+{
+   
+    $imagePath = null;
+    if ($request->hasFile('image')) {
+        $imagePath = $request->file('image')->store('images', 'public');  
+    }
+
     
     
+    $videoUrl = $this->extractYoutubeId($request->video_url);
+   
+    $media = new Media();
+    $media->title = $request->input('title');  
+    $media->description = $request->input('description'); 
+    $media->image = $imagePath;  
+    $media->videoid =  $videoUrl;  
+    $media->save();  
+
+    return view('dashboard/propertiesfeature.addmedia', [
+        'success' => 'media added successfully.',
+        'media' => $media,
+    ]);
+}
+
+private function extractYoutubeId($url)
+{
+    preg_match('/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $url, $matches);
+    return $matches[1] ?? null;
+}
+
 }
