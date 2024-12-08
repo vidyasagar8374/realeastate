@@ -23,6 +23,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::post('/storeproperties',  'storeproperties')->name('admin.storeproperties');
         Route::get('/keys' ,  'keys')->name('admin.keys');
         Route::post('/addkeys',  'addkeys')->name('admin.addkeys'); 
+        Route::get('/propetyindex', 'propetiyindex')->name('properties.propetiyindex'); 
 
         // create posts
 
@@ -36,6 +37,7 @@ Route::prefix('properties')->group(function () {
     Route::controller(PropertyFilterController::class)->group(function(){
         Route::get('/lists', 'propertieslists')->name('properties.lists'); 
         Route::get('/single-property', 'singleproperty')->name('properties.singleproperty'); 
+    
         
 
     });

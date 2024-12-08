@@ -120,6 +120,11 @@ class adminController extends Controller
     
         return view('dashboard/propertiesfeature.addkeys',with(['success' => 'Keys added successfully.']));
     }
+    public function propetiyindex(Request $request){
+        $properties = Propertie::get();
+        return view('dashboard.propertiesblock.propertiesindex',compact('properties'));
+    }
+    
     
     
 }

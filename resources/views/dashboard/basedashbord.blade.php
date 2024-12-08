@@ -53,7 +53,7 @@
         <ul>
             <li><i class="bi bi-speedometer2"></i>Dashboard</li>
             <li><i class="bi bi-building-add"></i><a href="{{ route('admin.addproperty') }}"> Add Property</a></li>
-            <li><i class="bi bi-building-add"></i><a href="{{ route('admin.addkeys') }}"> Add Keys</a></li>
+            <li><i class="bi bi-building-add"></i><a href="{{ route('admin.keys') }}"> Add Keys</a></li>
             <li><i class="bi bi-box-arrow-right"></i>Logout</li>
         </ul>
     </div>
