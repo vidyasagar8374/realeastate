@@ -43,5 +43,10 @@ class PropertyFilterController extends Controller
         return view('propetyfilter.property_single', compact('property'));
     }
 
+    public function about()
+    {
+        return view('mainpages.about');
+    }
+
  
 }
