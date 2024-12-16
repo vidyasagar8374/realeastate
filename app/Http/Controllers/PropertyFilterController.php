@@ -47,6 +47,8 @@ class PropertyFilterController extends Controller
     {
         return view('mainpages.about');
     }
-
+   public function contact(){
+       return view('mainpages.contact');
+   }
  
 }

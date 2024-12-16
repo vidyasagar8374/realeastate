@@ -152,7 +152,7 @@
                     </div>
                    </div>
                   </li>
-                  <li><a href="about.html">About</a></li>
+                  <li><a href="{{ route('about') }}">About</a></li>
                   <li><a href="#">Property <i class="fa-solid fa-angle-down"></i></a>
                     <ul class="dropdown-padding">
                       <li><a href="property.html">Property</a></li>
@@ -183,7 +183,7 @@
                       <li><a href="404.html">404</a></li>
                     </ul>
                   </li>
-                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="{{ route('contact') }}">Contact Us</a></li>
                 </ul>
               </div>
               <div class="btn-area">
