@@ -16,7 +16,29 @@ class Propertie extends Model
 
     public function specifications()
     {
-        return $this->hasMany(Specifications::class, 'property_id', 'id');
+        return $this->hasMany(Specifications::class, 'propety_id', 'id');
+    }
+
+    public function media()
+    {
+        return $this->hasOne(Media::class, 'property_id', 'id');
+    }
+
+    public function floorplans()
+    {
+        return $this->hasMany(Floorplans::class, 'propertie_id', 'id');
+    }
+
+    public function gallery()
+    {
+        return $this->hasMany(GalleryImages::class, 'property_id', 'id');
+    }
+
+    // amentie la lis
+
+    public function amenties()
+    {
+        return $this->hasMany(Propertyamentie::class, 'property_id', 'id');
     }
 
 }

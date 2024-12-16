@@ -7,7 +7,12 @@ use App\Models\Propertie;
 use App\Models\Specifications;
 use App\Models\Amenties;
 use App\Models\Media;
+use App\Models\Specification;
 use App\Models\Floorplans;
+use App\Models\GalleryImages;
+use App\Models\Propertyamentie;
+use Illuminate\Support\Facades\Storage;
+
 use Illuminate\Support\Facades\DB;
 
 class adminController extends Controller
@@ -99,30 +104,46 @@ class adminController extends Controller
         }
  
     }
-    public function keys()
+    public function specification(Request $request)
     {
-         return view('dashboard/propertiesfeature.addkeys');
+        $property_id = $request->input('property_id');
+        $properties = Propertie::where('id', $property_id)->first();
+         return view('dashboard/propertiesfeature.specification',compact('properties'));
     }
-    public function addkeys(Request $request)
+    public function storespecification(Request $request)
     {
-        dd($request);
-        $values = $request->input('value', []); // Default to empty array if null
-        $keys = $request->input('key', []);     // Default to empty array if null
-    
-        if (!is_array($values) || !is_array($keys)) {
-            return redirect()->back()->withErrors('Invalid input data.');
-        }
-    
-        foreach ($values as $index => $value) {
-            Key::create([
-                'key' => $keys[$index] ?? null,
-                'value' => $value,
-                'property_id' => $request->input('property_id'),
-                
-            ]);
-        }
 
-        return view('dashboard/propertiesfeature.addkeys',with(['success' => 'Keys added successfully.']));
+        try {
+
+                    $property_id = $request->input('property_id');
+                    $values = $request->input('value', []); // Default to empty array if null
+                    $keys = $request->input('key', []);     // Default to empty array if null
+                
+                    if (!is_array($values) || !is_array($keys)) {
+                        return redirect()->back()->withErrors('Invalid input data.');
+                    }
+
+                    // intert key and values
+                    if (count($values) !== count($keys)) {
+                        return redirect()->back()->withErrors('Number of values and keys must be the same.');
+                    }
+
+                
+                    foreach ($values as $index => $value) {
+                        Specification::create([
+                            'key' => $keys[$index] ?? null,
+                            'value' => $value,
+                            'propety_id' => $property_id,
+                           
+                        ]);
+                    }
+
+                    return redirect()->back()->with('success', 'Keys added successfully.');
+               
+        }catch(Exception $e){
+            return redirect()->back()->with('error', 'Keys not added successfully. Error: ' . $e->getMessage());
+        }
+        
     }
     public function propetiyindex(Request $request){
         $properties = Propertie::get();
@@ -133,82 +154,191 @@ class adminController extends Controller
     {
          return view('dashboard/propertiesfeature.addamenties');
     }
+
+    public function storeAmenties(Request $request)
+    {
+        
+        $amenties = new Amenties();
+        $amenties->name = $request->input('name');  
+        $amenties->icon = $request->input('icon');  
+        $amenties->save();
+
+        return view('dashboard/propertiesfeature.addamenties', [
+            'success' => 'Amenities added successfully.',
+            'amenties' => $amenties 
+        ]);
+    }
+    /**
+     * Shows the view for managing amenties for a given property.
+     * 
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function propertyamenties(Request $request){
+        $property_id = $request->input('property_id');
+        $property = Propertie::where('id', $property_id)->first();
+        $amenties = Amenties::where('status', 1)->get();
+        return view('dashboard/propertiesfeature.propertyamenities', compact('property', 'amenties'));
+    }
     
  // instert and  save amenties featues in the database
- public function storeAmenties(Request $request)
-{
+    public function storeropertyAmenties(Request $request)
+        {
+            // $validated = [
+            //     'property_id' => 'required',
+            //     'property_amenties' => 'required|array|min:1',
+            // ];
+        try {
+            $property_id = $request->input('property_id');
+            $amenties = $request->input('property_amenties');
+            // dd($amenties);
+             foreach ($amenties as $ament) {
+                // dd($ament);
+                $propertyamenties = new Propertyamentie();
+                $propertyamenties->amentment_id = $ament;
+                $propertyamenties->property_id = $property_id;
+                $propertyamenties->save();
+            }
+            if($propertyamenties){
+                // return redirect with success message
+                return redirect()->back()->with('success', 'Amenities added successfully.');
+            }
+            
+        }catch (\Exception $e) {
+            // return redirect with error message
+            return redirect()->back()->with('error', 'Amenities not added successfully. Error: ' . $e->getMessage());
+  
+        }
+        
+      
+    }
     
-    $amenties = new Amenties();
-    $amenties->name = $request->input('name');  
-    $amenties->icon = $request->input('icon');  
-    $amenties->save();
-
-    
-    return view('dashboard/propertiesfeature.addamenties', [
-        'success' => 'Amenities added successfully.',
-        'amenties' => $amenties 
-    ]);
-}
-
-public function floorplans()
-{
-     return view('dashboard/propertiesfeature.addfloors');
-}
+    public function floorplans(Request $request)
+    {
+        $properties = Propertie::where('id', $request->input('property_id'))->first();
+        return view('dashboard/propertiesfeature.addfloors',compact('properties'));
+    }
 
 public function storeFloorplans(Request $request)
 {
-    if ($request->hasFile('image')) {
-        
-        $image = $request->file('image');
-        $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $imagePath = $image->storeAs('images', $imageName, 'public');
-        
-       
+    try {
+        $property_id = $request->input('property_id');
+    
+        $baseDirectory = 'images/' . $property_id;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+    
+            // Create the base directory if it doesn't exist
+            if (!Storage::exists($baseDirectory)) {
+                Storage::makeDirectory($baseDirectory);
+            }
+    
+            // Store the image in the property_id folder
+            $imagePath = $image->storeAs($baseDirectory, $imageName, 'public');
+        } else {
+            return redirect()->back()->with('error', 'Image file is required.');
+        }
+    
+        // Save the floorplan details
         $floorplans = new Floorplans();
         $floorplans->title = $request->input('title');
         $floorplans->subtitle = $request->input('subtitle');
         $floorplans->price = $request->input('price');
-        $floorplans->imagepath = $imagePath; 
+        $floorplans->imagepath = $imagePath; // Store the full path in the database
         $floorplans->save();
+    
+        return redirect()->back()->with('success', 'Floorplans added successfully.');
+    } catch (\Exception $e) {
+        return redirect()->back()->with('error', 'Floorplans not added successfully. Error: ' . $e->getMessage());
     }
+  
 
     
-    return view('dashboard/propertiesfeature.addfloors', [
-        'success' => 'Floorplans added successfully.',
-        'floorplans' => $floorplans,
-    ]);
+
 }
 
-public function media()
+public function media(Request $request)
 {
-     return view('dashboard/propertiesfeature.addmedia');
+    $properties = Propertie::where('id', $request->input('property_id'))->first();
+     return view('dashboard/propertiesfeature.addmedia', compact('properties'));
 }
 // insert video and images in the database
 public function storeMedia(Request $request)
 {
-   
-    $imagePath = null;
-    if ($request->hasFile('image')) {
-        $imagePath = $request->file('image')->store('images', 'public');  
-    }
 
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
     
+        // Create the base directory if it doesn't exist
+        $baseDirectory = 'images/' . $request->input('property_id');
+        if (!Storage::exists($baseDirectory)) {
+            Storage::makeDirectory($baseDirectory);
+        }
     
+        // Store the image in the property_id folder
+        $imagePath = $image->storeAs($baseDirectory, $imageName, 'public');
+    } else {
+        return redirect()->back()->with('error', 'Image file is required.');
+    }
+   try{
+
     $videoUrl = $this->extractYoutubeId($request->video_url);
-   
     $media = new Media();
     $media->title = $request->input('title');  
     $media->description = $request->input('description'); 
-    $media->image = $imagePath;  
-    $media->videoid =  $videoUrl;  
+    $media->image = $imagePath; 
+    $media->videoid =  $videoUrl; 
+    $media->property_id = $request->input('property_id');
     $media->save();  
 
-    return view('dashboard/propertiesfeature.addmedia', [
-        'success' => 'media added successfully.',
-        'media' => $media,
-    ]);
+    return redirect()->back()->with('success', 'Media added successfully.');
+
+   }catch(Exception $e){
+    return redirect()->back()->with('error', 'Media not added successfully. Error: ' . $e->getMessage());
+   }
+
+   
 }
 
+
+//  create a gallery 
+public function gallery(Request $request){
+    $properties = Propertie::where('id', $request->input('property_id'))->first();
+     return view('dashboard/propertiesfeature.gallery', compact('properties'));
+    }
+    // store gallery properties
+    public function storeGallery(Request $request){
+        try {
+            
+            $property_id = $request->input('property_id');
+            $baseDirectory = 'images/' . $request->input('property_id');
+            if (!Storage::exists($baseDirectory)) {
+                Storage::makeDirectory($baseDirectory);
+            }
+            if ($request->hasFile('images')) {
+                // for loop image
+                $images = $request->file('images');
+                foreach ($images as $imageKey => $image) {
+                    $imageName = time() . '-' . $imageKey . '.' . $image->getClientOriginalExtension();
+                    $imagePath = $image->storeAs($baseDirectory, $imageName, 'public');
+              
+                    // Save the gallery details
+                    $gallery = new GalleryImages();
+                    $gallery->image = $imagePath; // Store the full path in the database
+                    $gallery->property_id = $property_id;
+                    $gallery->save();
+                }
+                return redirect()->back()->with('success', 'Gallery added successfully.');
+            } else {
+                return redirect()->back()->with('error', 'Image file is required.');
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Gallery not added successfully. Error: ' . $e->getMessage());
+        }
+    }
+            // Save the gallery details 
 private function extractYoutubeId($url)
 {
     preg_match('/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $url, $matches);

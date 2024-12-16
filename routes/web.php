@@ -21,12 +21,18 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('/bannerview/{id}',  'bannerview')->name('admin.banners.view');  // update banner
         Route::delete('/banners/delete/{id}', 'destroybanner')->name('admin.banners.delete');  // delete banner
         Route::post('/storeproperties',  'storeproperties')->name('admin.storeproperties');
-        Route::get('/keys' ,  'keys')->name('admin.keys');
-        Route::post('/addkeys',  'addkeys')->name('admin.addkeys'); 
+        Route::get('/specification' ,  'specification')->name('admin.specification');
+        Route::post('/storespecification',  'storespecification')->name('admin.storespecification'); 
         Route::get('/propetyindex', 'propetiyindex')->name('properties.propetiyindex'); 
 
         Route::get('/Amenties' ,  'Amenties')->name('admin.Amenties');
         Route::post('/addamenties' ,  'storeAmenties')->name('admin.storeAmenties');
+
+
+
+        Route::get('/propertyamenties' ,  'propertyamenties')->name('admin.propertyamenties');
+        Route::post('/storeropertyAmenties' ,  'storeropertyAmenties')->name('admin.storeropertyAmenties');
+
 
         Route::get('/floorplans' ,  'floorplans')->name('admin.floorplans');
         Route::post('/addfloorplans' ,  'storeFloorplans')->name('admin.storeFloorplans');
@@ -34,6 +40,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         Route::get('/media' ,  'media')->name('admin.media');
         Route::post('/addmedia' ,  'storeMedia')->name('admin.storeMedia');
 
+        Route::get('/gallery' ,  'gallery')->name('admin.gallery');
+        Route::post('/storegallery' ,  'storegallery')->name('admin.storegallery');
         // create posts
 
         Route::get('/contactlist', 'contactlist')->name('admin.contactlist'); 
@@ -45,7 +53,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 Route::prefix('properties')->group(function () {
     Route::controller(PropertyFilterController::class)->group(function(){
         Route::get('/lists', 'propertieslists')->name('properties.lists'); 
-        Route::get('/single-property', 'singleproperty')->name('properties.singleproperty'); 
+        Route::get('/single-property/{id}', 'singleproperty')->name('properties.singleproperty'); 
     
         
 

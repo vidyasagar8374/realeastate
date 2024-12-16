@@ -5,7 +5,7 @@
         <!-- Image Section -->
 
         <div class="col-md-4 property-image">
-        <a href="{{ route('properties.singleproperty') }}">
+        <a href="{{ route('properties.singleproperty' , ['id' => $data->id]) }}">
             <img src="{{  asset($data->property_sm_img)  }}" alt="Property Image" class="img-fluid rounded" />
         </a>
         </div>

@@ -420,8 +420,168 @@
                     <div class="space24"></div>
                     <p>Located in the trendy Calishire neighborhood, this apartment is perfectly positioned to enjoy all that San Francisco has to offer. From world-class restaurants and boutiques to cultural landmarks and green spaces, everything you need is just a short walk or ride away. Excellent public transport links make commuting a breeze, whether you're headed to the Financial District, SOMA, or beyond.</p>
                 </div>
-            </div>
+                  <!-- ==================== facilities ==================== -->
+                         
+                  <!-- ==================== end facilities ==================== -->
+                <!-- ==========================specifications========================== -->
+                      <div class="specification pt-3 pb-3">
+                        <h3>Specifications</h3>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <th scope="col">First</th>
+                                  <th scope="col">Last</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  
+                                </tr>
+                                <tr>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+    
+                                </tr>
+                                <tr>
+                                  <td>Larry</td>
+                                  <td>the Bird</td>
+                                 
+                                </tr>
+                              </tbody>
+                            </table>
+                        
+                        </div>
+                        <div class="col-lg-6">
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+  
+                              </tr>
+                              <tr>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                               
+                              </tr>
+                            </tbody>
+                          </table>
+                      
+                      </div>
+                        </div>
+                         
+                       
+                      </div>
+                <!-- ==========================End specifications========================== -->
 
+
+             <!-- =========================accordion start========================= -->
+           <!-- accordion with no border -->
+             <div class=" mt-5 mb-5">
+              <!-- header -->
+             
+                <div class="col-lg-12 pt-3 pb-3">
+                  <h2>Floor Plans</h2>
+              </div>
+              <!-- end header -->
+             <div class="accordion" id="accordionExample">
+                          <div class="accordion-item">
+                            <h2 class="accordion-header">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Accordion Item #1
+                              </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+ 
+                                     <!-- swiper start with four images -->
+                                     <div class="swiper-container-wrapper" style="position: relative;">
+                                      <swiper-container 
+                                      navigation="true" 
+                                      space-between="10" 
+                                      speed="500" 
+                                      loop="true" 
+                                      css-mode="true" 
+                                      breakpoints='{
+                                          "320": {"slidesPerView": 1},
+                                          "640": {"slidesPerView": 2},
+                                          "1024": {"slidesPerView": 2}
+                                      }'>
+
+                                      <div class="swiper-slide">
+                                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                                      </div>
+                                </swiper-container>
+                               </div>
+                               
+                              </div>
+                            </div>
+                          </div>
+
+              </div>
+             </div>
+             
+            <!-- =========================accordion End========================= -->
+
+
+            <!-- =========================video section start========================== -->
+                  <div class="container my-5">
+                    <!-- Video Thumbnail -->
+                    <div id="videoThumbnail" class="video-thumbnail">
+                        <img src="https://via.placeholder.com/600x350.png?text=Video+Thumbnail" alt="Video Thumbnail">
+                        <div class="play-icon"></div>
+                    </div>
+            
+                    <!-- Video Player -->
+                    <div id="videoContainer" class="video-container">
+                        <button id="closeBtn" class="close-btn">&times;</button>
+                        <!-- Video.js Player -->
+                        <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto" width="600" height="350">
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+      
+            <!-- =========================End video section start========================== -->
+              </div>
+      
             <div class="col-lg-4">
                 <div class="agent-single-area">
                     <div class="space50 d-lg-block d-none"></div>
@@ -663,4 +823,30 @@
   </div>
 </div>
 <!--===== CTA AREA ENDS =======-->
+
+<script>
+  // Elements
+  const videoThumbnail = document.getElementById('videoThumbnail');
+  const videoContainer = document.getElementById('videoContainer');
+  const videoPlayer = document.getElementById('videoPlayer');
+  const closeBtn = document.getElementById('closeBtn');
+
+  // Initialize Video.js (Optional)
+  const player = videojs(videoPlayer);
+
+  // Show video player and hide thumbnail
+  videoThumbnail.addEventListener('click', () => {
+    alert('Video clicked!');
+      videoThumbnail.style.display = 'none';
+      videoContainer.style.display = 'block';
+      player.play(); // Play the video
+  });
+
+  // Hide video player and show thumbnail
+  closeBtn.addEventListener('click', () => {
+      player.pause(); // Pause the video
+      videoContainer.style.display = 'none';
+      videoThumbnail.style.display = 'block';
+  });
+</script>
 @endsection

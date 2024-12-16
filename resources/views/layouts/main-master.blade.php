@@ -21,9 +21,16 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick-slider.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+        <!-- Video.js CSS (Optional) -->
+        <link href="https://vjs.zencdn.net/7.21.1/video-js.css" rel="stylesheet" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!--=====  JS SCRIPT LINK =======-->
     <script src="{{ asset('assets/js/plugins/jquery-3-6-0.min.js') }}"></script>
+
+    <!-- =============custom css ==============-->
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 </head>
 <body class="homepage1-body">
 
@@ -436,6 +443,8 @@
 <script src="{{ asset('assets/js/plugins/gsap.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/ScrollTrigger.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/Splitetext.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="https://vjs.zencdn.net/7.21.1/video.min.js"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>

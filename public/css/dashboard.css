@@ -192,3 +192,53 @@ width: 100%; /* Full-width content when sidebar is hidden */
     width: auto;
 }
 
+.unstyled-link{ 
+    text-align: center;
+    background-color: #ddd;
+    border-radius: 4px;
+ }
+.unstyled-link a{
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+   
+}
+
+
+.gallery-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+.gallery-item {
+    position: relative;
+    display: inline-block;
+}
+.gallery-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.remove-btn:hover {
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+}
+

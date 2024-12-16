@@ -48,42 +48,65 @@
   </div>
 </div>
 </div>
-
+<script>
+    const routes = {
+        viewproperty : "{{ route('properties.singleproperty', ['id' => '__PROPERTY_ID__']) }}",
+        videoUrl : "{{ route('admin.media', ['property_id' => '__PROPERTY_ID__']) }}",
+        imagesUrl : "{{ route('admin.gallery', ['property_id' => '__PROPERTY_ID__']) }}",
+        propertyAmenities : "{{ route('admin.propertyamenties', ['property_id' => '__PROPERTY_ID__']) }}",
+        specifications : "{{ route('admin.specification', ['property_id' => '__PROPERTY_ID__']) }}",
+        floorPlan : "{{ route('admin.floorplans', ['property_id' => '__PROPERTY_ID__']) }}"
+    };
+</script>
 <script>
   function launchModal(propertyId, propertyExists) {
+  
     // Generate the dynamic route URL
-    const detailsUrl = `/properties/${propertyId}`;
-    const amenitiesUrl = `/properties/${propertyId}/amenities`;
-    const videoUrl = `/properties/${propertyId}/videos`;
-    const imagesUrl = `/properties/${propertyId}/images`;
+    // send to route service
+    const detailsUrl = routes.propertyAmenities.replace('__PROPERTY_ID__', propertyId);
+    const propertyAmenitiesdetail = routes.propertyAmenities.replace('__PROPERTY_ID__', propertyId);
+    const videourUrl = routes.videoUrl.replace('__PROPERTY_ID__', propertyId);
+    const imagesUrl = routes.imagesUrl.replace('__PROPERTY_ID__', propertyId);
+    const specificationsUrl = routes.specifications.replace('__PROPERTY_ID__', propertyId);
+    const floorPlanUrl = routes.floorPlan.replace('__PROPERTY_ID__', propertyId);
 
     // Construct the dynamic HTML content with icons
     const modalContent = `
       <div class="container">
       <p>Property ID: ${propertyId}</p>
         <div class="row">
-            <div class="col">
-                <p> <a href="${detailsUrl}" class="btn btn-link" target="_blank">
-                  <i class="bi bi-house"></i> View Property Details
-                 </a></p> 
-                 
+            <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+                <div class=""> <a href="${detailsUrl}" class="btn btn-link" target="_blank">
+                  <i class="bi bi-house d-block"></i>View
+                 </a></div>  
             </div>
-            <div class="col">
-                <p> <a href="${amenitiesUrl}" class="btn btn-link" target="_blank">
-                  <i class="bi bi-list-check"></i> View Property Details
-                 </a></p> 
+            <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+                <div class=""> <a href="${propertyAmenitiesdetail}" class="btn btn-link" target="_blank">
+                  <i class="bi bi-list-check d-block"></i>Ammenities
+                 </a></div> 
             </div>
-            <div class="col">
-                <p> <a href="${videoUrl}" class="btn btn-link" target="_blank">
-                  <i class="bi bi-play-circle"></i> View Property Details
-                 </a></p> 
+            <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+                <div class=""> 
+                <a href="${videourUrl}" class="btn btn-link" target="_blank">
+                  <i class="bi bi-play-circle d-block"></i>video
+                 </a>
+                 </div> 
             </div>
-            <div class="col">
-                <p> <a href="${imagesUrl}" class="btn btn-link" target="_blank">
-                  <i class="bi bi-images"></i> View Property Details
-                 </a></p> 
+            <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+                <div class=""> <a href="${imagesUrl}" class="btn btn-link" target="_blank">
+                  <i class="bi bi-images d-block"></i>Images
+                 </a></div> 
             </div>
-
+               <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+                <div class=""> <a href="${floorPlanUrl}" class="btn btn-link" target="_blank">
+                  <i class="bi bi-images d-block"></i>Planning
+                 </a></div> 
+            </div>
+              <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+                <div class=""> <a href="${specificationsUrl}" class="btn btn-link" target="_blank">
+                  <i class="bi bi-images d-block"></i>Specifications
+                 </a></div> 
+            </div>
         </div>
       </div>
      
@@ -105,7 +128,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Assets</h5>
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

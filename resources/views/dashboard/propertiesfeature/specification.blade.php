@@ -20,10 +20,20 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-body">
+                    <!-- show success and error message  using laravel response show in div -->
+                        @if (Session::has('success'))
+                        <div class="alert alert-success">
+                            {{ Session::get('success') }}
+                        </div>
+                        @endif @if (Session::has('error'))
+                        <div class="alert alert-danger">
+                            {{ Session::get('error') }}
+                        </div>
+                        @endif
                         <!-- <div class="step-headers d-flex justify-content-between mb-4">
                             <div class="step-header active">Specifications</div>
                         </div> -->
-                        <form id="multiStepForm" method="POST" action="{{ route('admin.addkeys') }}" enctype="multipart/form-data">
+                        <form id="multiStepForm" method="POST" action="{{ route('admin.storespecification') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-step">
                                     <h4 class="heading">Specifications</h4>
@@ -47,6 +57,7 @@
                                     <button type="button" id="add-field-button" class="btn btn-primary mt-3">Add</button>
                                     <button type="submit" class="btn btn-success mt-3">Submit</button>
                                 </div>
+                                <input type="hidden" name="property_id" value="{{ $properties->id }}" />
                             </form>
                     </div>
                 </div>

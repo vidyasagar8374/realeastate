@@ -24,9 +24,17 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-body">
-                        <!-- <div class="step-headers d-flex justify-content-between mb-4">
-                            <div class="step-header active">Specifications</div>
-                        </div> -->
+                                   <!-- show success and error message  using laravel response show in div -->
+                                    @if (Session::has('success'))
+                                    <div class="alert alert-success">
+                                        {{ Session::get('success') }}
+                                    </div>
+                                    @endif 
+                                    @if (Session::has('error'))
+                                    <div class="alert alert-danger">
+                                        {{ Session::get('error') }}
+                                    </div>
+                                    @endif    
                         <form id="multiStepForm" method="POST" action="{{ route('admin.storeMedia') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-step">
@@ -60,6 +68,7 @@
                                         
                                     </div>
                                 </div>
+                                <input type="hidden" name="property_id" value="{{ $properties->id }}">
                                 <div class="form-step">
                                     <button type="submit" class="btn btn-primary amenties-btn">Add Media</button>
                                 </div>

@@ -16,7 +16,6 @@
  border:none;
 }
 </style>
-
 <div class="content">
     <!-- <h1>Add Keys</h1> -->
     <div class="container mt-5">
@@ -24,9 +23,6 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-body">
-                        <!-- <div class="step-headers d-flex justify-content-between mb-4">
-                            <div class="step-header active">Specifications</div>
-                        </div> -->
                         <form id="multiStepForm" method="POST" action="{{ route('admin.storeFloorplans') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-step">
@@ -59,6 +55,7 @@
                                         
                                     </div>
                                 </div>
+                                <input type="hidden" name="property_id" value="{{ $properties->id }}">
                                 <div class="form-step">
                                     <button type="submit" class="btn btn-primary amenties-btn">Add Plans</button>
                                 </div>

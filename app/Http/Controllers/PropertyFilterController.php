@@ -33,7 +33,14 @@ class PropertyFilterController extends Controller
             
     }
     public function singleproperty(Request $request){
-        return view('propetyfilter.property_single');
+        // dd($request);
+        $property_id = $request->id;
+        // join $property_id with GalleryImages Media floorplans specifications
+        $property = Propertie::with('gallery', 'media', 'floorplans', 'specifications', 'amenties')->where('id', $property_id)->first();
+        // dd($property);
+
+
+        return view('propetyfilter.property_single', compact('property'));
     }
 
  
