@@ -77,14 +77,23 @@
 <!--===== PAGE PROGRESS END=======-->
 
    <!--=====HEADER START=======-->
+   <!-- if route other than homepage need to show this class "header-area homepage1 inner-menu header header-sticky d-none d-lg-block" -->
+   @php
+    $classname = (request()->route()->getName() != 'welcome') 
+        ? 'header-area homepage1 inner-menu header header-sticky d-none d-lg-block' 
+        : 'header-area homepage1 header header-sticky d-none d-lg-block';
+      $homeicon = (request()->route()->getName() != 'welcome') 
+        ? 'assets/img/logo/logo2.png' 
+        : 'assets/img/logo/logo1.png';
+   @endphp
    <header>
-    <div class="header-area homepage1 header header-sticky d-none d-lg-block " id="header">
+    <div class="{{ $classname }}" id="header">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="header-elements">
               <div class="site-logo">
-                <a href="index.html"><img src="assets/img/logo/logo1.png" alt=""></a>
+                <a href="index.html"><img src="{{ $homeicon }}" alt=""></a>
               </div>
               <div class="main-menu">
                 <ul>

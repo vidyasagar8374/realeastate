@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
@@ -67,8 +67,17 @@ Route::prefix('properties')->group(function () {
     });
 
 });
+
+
+
+    Route::controller(PropertyFilterController::class)->group(function(){
+        Route::get('/about',  'about')->name('about');
+        Route::get('/contact',  'contact')->name('contact');
+    });
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/about', [App\Http\Controllers\PropertyFilterController::class, 'about'])->name('about');
-Route::get('/contact', [App\Http\Controllers\PropertyFilterController::class, 'contact'])->name('contact');
+
+
+
