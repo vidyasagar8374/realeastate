@@ -93,7 +93,7 @@
           <div class="col-lg-12">
             <div class="header-elements">
               <div class="site-logo">
-                <a href="index.html"><img src="{{ $homeicon }}" alt=""></a>
+                <a href="{{  route('welcome') }}"><img src="{{ $homeicon }}" alt=""></a>
               </div>
               <div class="main-menu">
                 <ul>
