@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\DB;
 class adminController extends Controller
 {
     //
+    
     public function addproperty(){
         return view('dashboard.addproperties');
     }
