@@ -259,7 +259,7 @@
               <div class="space90"></div>
               <div class="author-images">
                 <div class="img1 image-anime reveal">
-                  <img src="assets/img/all-images/about-img1.png" alt="">
+                  <img src="assets/images/image2.png" alt="">
                 </div>
                 <div class="city-area">
                   <div class="icons">
@@ -277,11 +277,11 @@
             <div class="col-lg-6 col-md-6">
               <div class="author-images">
                 <div class="img1 image-anime reveal">
-                  <img src="assets/img/all-images/about-img2.png" alt="">
+                  <img src="assets/images/image3.png" alt="">
                 </div>
                 <div class="space30"></div>
                 <div class="img1 image-anime reveal">
-                  <img src="assets/img/all-images/about-img3.png" alt="">
+                  <img src="assets/images/image4.png" alt="">
                 </div>
               </div>
             </div>
@@ -549,7 +549,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="galler-author-area" data-aos="fade-up" data-aos-duration="800">
           <div class="img1">
-            <img src="assets/img/all-images/gallery-img1.png" alt="">
+            <img src="assets/images/image5.png" alt="">
           </div>
 
           <div class="content-area">
@@ -561,7 +561,7 @@
 
         <div class="galler-author-area" data-aos="fade-up" data-aos-duration="1000" >
           <div class="img1">
-            <img src="assets/img/all-images/gallery-img4.png" alt="">
+            <img src="assets/images/gallery-img4.png" alt="">
           </div>
 
           <div class="content-area">
@@ -575,7 +575,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="galler-author-area" data-aos="fade-up" data-aos-duration="1100" >
           <div class="img1">
-            <img src="assets/img/all-images/gallery-img2.png" alt="">
+            <img src="assets/images/gallery-img2.png" alt="">
           </div>
 
           <div class="content-area">
@@ -587,7 +587,7 @@
 
         <div class="galler-author-area" data-aos="fade-up" data-aos-duration="1200" >
           <div class="img1">
-            <img src="assets/img/all-images/gallery-img5.png" alt="">
+            <img src="assets/images/gallery-img5.png" alt="">
           </div>
 
           <div class="content-area">
@@ -599,7 +599,7 @@
 
         <div class="galler-author-area" data-aos="fade-up" data-aos-duration="1300" >
           <div class="img1">
-            <img src="assets/img/all-images/gallery-img6.png" alt="">
+            <img src="assets/images/gallery-img6.png" alt="">
           </div>
 
           <div class="content-area">
@@ -615,7 +615,7 @@
           <div class="col-lg-12 col-md-6">
             <div class="galler-author-area active" data-aos="fade-up" data-aos-duration="1400" >
               <div class="img1">
-                <img src="assets/img/all-images/gallery-img3.png" alt="">
+                <img src="assets/images/gallery-img3.png" alt="">
               </div>
     
               <div class="content-area">
@@ -629,7 +629,7 @@
           <div class="col-lg-12 col-md-6">
             <div class="galler-author-area" data-aos="fade-up" data-aos-duration="1500" >
               <div class="img1">
-                <img src="assets/img/all-images/gallery-img7.png" alt="">
+                <img src="assets/images/gallery-img7.png" alt="">
               </div>
     
               <div class="content-area">
@@ -746,7 +746,7 @@
       <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="700">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img1.png" alt="">
+            <img src="assets/images/location-img1.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -759,7 +759,7 @@
       <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img2.png" alt="">
+            <img src="assets/images/location-img2.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -772,7 +772,7 @@
       <div class="col-lg-5 col-md-6" data-aos="zoom-in" data-aos-duration="900">
         <div class="location-images-area active">
           <div class="img1">
-            <img src="assets/img/all-images/location-img6.png" alt="">
+            <img src="assets/images/location-img6.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -785,7 +785,7 @@
       <div class="col-lg-5 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img3.png" alt="">
+            <img src="assets/images/location-img3.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -798,7 +798,7 @@
       <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1100">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img4.png" alt="">
+            <img src="assets/images/location-img4.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -811,7 +811,7 @@
       <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="1200">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img5.png" alt="">
+            <img src="assets/images/location-img5.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -844,22 +844,22 @@
            <div class="col-lg-6">
              <div class="teimonial-slider-nav-area foter-carousel">
                <div class="testimonial-slider-img reveal image-anime">
-                 <img src="assets/img/all-images/testimonial-img1.png" alt="">
+                 <img src="assets/images/testimonial-img1.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img3.png" alt="">
+                <img src="assets/images/testimonial-img3.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img4.png" alt="">
+                <img src="assets/images/testimonial-img4.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img1.png" alt="">
+                <img src="assets/images/testimonial-img1.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img3.png" alt="">
+                <img src="assets/images/testimonial-img3.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img4.png" alt="">
+                <img src="assets/images/testimonial-img4.png" alt="">
                </div>
              </div>
            </div>
@@ -958,7 +958,7 @@
       <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
         <div class="blog-author-boxarea">
           <div class="img1 image-anime">
-            <img src="assets/img/all-images/blog-img1.png" alt="">
+            <img src="assets/images/blog-img1.png" alt="">
           </div>
           <div class="date">
             <a href="#">12 May 2024</a>
@@ -978,7 +978,7 @@
       <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-duration="1200">
         <div class="blog-author-boxarea">
           <div class="img1 image-anime">
-            <img src="assets/img/all-images/blog-img2.png" alt="">
+            <img src="assets/images/blog-img2.png" alt="">
           </div>
           <div class="date">
             <a href="#">10 May 2024</a>

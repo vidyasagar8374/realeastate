@@ -26,14 +26,14 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="images image-anime reveal">
-                    <img src="assets/img/all-images/about-img15.png" alt="">
+                    <img src="assets/images/image2.png" alt="">
                 </div>
             </div>
 
             <div class="col-lg-9">
                 <div class="other-area">
                     <div class="img1 image-anime reveal">
-                        <img src="assets/img/all-images/about-img16.png" alt="">
+                        <img src="assets/images/about-img16.png" alt="">
                     </div>
                     <div class="space32"></div>
                     <div class="counter-box-area">
@@ -70,7 +70,7 @@
               <div class="space90"></div>
               <div class="author-images">
                 <div class="img1 image-anime reveal">
-                  <img src="assets/img/all-images/about-img1.png" alt="">
+                  <img src="assets/images/image2.png" alt="">
                 </div>
                 <div class="city-area">
                   <div class="icons">
@@ -88,11 +88,11 @@
             <div class="col-lg-6 col-md-6">
               <div class="author-images">
                 <div class="img1 image-anime reveal">
-                  <img src="assets/img/all-images/about-img2.png" alt="">
+                  <img src="assets/images/image3.png" alt="">
                 </div>
                 <div class="space30"></div>
                 <div class="img1 image-anime reveal">
-                  <img src="assets/img/all-images/about-img3.png" alt="">
+                  <img src="assets/images/image4.png" alt="">
                 </div>
               </div>
             </div>
@@ -140,7 +140,7 @@
   
                   <div class="col-lg-6">
                   <div class="images image-anime reveal">
-                      <img src="assets/img/all-images/mission-img1.png" alt="">
+                      <img src="assets/images/mission-img1.png" alt="">
                   </div>
               </div>
               </div>
@@ -153,7 +153,7 @@
                 <div class="row align-items-center">
                   <div class="col-lg-6">
                     <div class="images image-anime reveal">
-                        <img src="assets/img/all-images/mission-img2.png" alt="">
+                        <img src="assets/images/mission-img2.png" alt="">
                     </div>
                 </div>
                   <div class="col-lg-6">
@@ -198,7 +198,7 @@
       <div class="col-lg-3 col-md-6">
         <div class="team-author-area">
           <div class="img1 reveal image-anime">
-            <img src="assets/img/all-images/team-img1.png" alt="">
+            <img src="assets/images/team-img1.png" alt="">
           </div>
           <div class="space16"></div>
           <div class="content">
@@ -215,7 +215,7 @@
         <div class="space40 d-lg-block d-none"></div>
         <div class="team-author-area">
           <div class="img1 reveal image-anime">
-            <img src="assets/img/all-images/team-img2.png" alt="">
+            <img src="assets/images/team-img2.png" alt="">
           </div>
           <div class="space16"></div>
           <div class="content">
@@ -232,7 +232,7 @@
         <div class="space80 d-lg-block d-none"></div>
         <div class="team-author-area">
           <div class="img1 reveal image-anime">
-            <img src="assets/img/all-images/team-img3.png" alt="">
+            <img src="assets/images/team-img3.png" alt="">
           </div>
           <div class="space16"></div>
           <div class="content">
@@ -249,7 +249,7 @@
         <div class="space120 d-lg-block d-none"></div>
         <div class="team-author-area">
           <div class="img1 reveal image-anime">
-            <img src="assets/img/all-images/team-img4.png" alt="">
+            <img src="assets/images/team-img4.png" alt="">
           </div>
           <div class="space16"></div>
           <div class="content">
@@ -281,7 +281,7 @@
     <div class="row">
       <div class="col-lg-4">
         <div class="img1 reveal image-anime">
-          <img src="assets/img/all-images/service-img5.png" alt="">
+          <img src="assets/images/service-img5.png" alt="">
         </div>
       </div>
       <div class="col-lg-8">
@@ -376,7 +376,7 @@
           <div class="row align-items-center">
             <div class="col-lg-6">
               <div class="images image-anime reveal">
-                <img src="assets/img/all-images/visit-img1.png" alt="">
+                <img src="assets/images/visit-img1.png" alt="">
               </div>
             </div>
             <div class="col-lg-6">
@@ -505,7 +505,7 @@
       <div class="col-lg-3 col-md-6">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img1.png" alt="">
+            <img src="assets/images/location-img1.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -518,7 +518,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img2.png" alt="">
+            <img src="assets/images/location-img2.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -531,7 +531,7 @@
       <div class="col-lg-5 col-md-6">
         <div class="location-images-area active">
           <div class="img1">
-            <img src="assets/img/all-images/location-img6.png" alt="">
+            <img src="assets/images/location-img6.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -544,7 +544,7 @@
       <div class="col-lg-5 col-md-6">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img3.png" alt="">
+            <img src="assets/images/location-img3.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -557,7 +557,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img4.png" alt="">
+            <img src="assets/images/location-img4.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -570,7 +570,7 @@
       <div class="col-lg-3 col-md-6">
         <div class="location-images-area">
           <div class="img1">
-            <img src="assets/img/all-images/location-img5.png" alt="">
+            <img src="assets/images/location-img5.png" alt="">
           </div>
           <div class="content-area">
             <a href="property.html">Los Angles</a>
@@ -603,22 +603,22 @@
            <div class="col-lg-6">
              <div class="teimonial-slider-nav-area foter-carousel">
                <div class="testimonial-slider-img reveal image-anime">
-                 <img src="assets/img/all-images/testimonial-img1.png" alt="">
+                 <img src="assets/images/testimonial-img1.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img3.png" alt="">
+                <img src="assets/images/testimonial-img3.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img4.png" alt="">
+                <img src="assets/images/testimonial-img4.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img1.png" alt="">
+                <img src="assets/images/testimonial-img1.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img3.png" alt="">
+                <img src="assets/images/testimonial-img3.png" alt="">
                </div>
                <div class="testimonial-slider-img reveal image-anime">
-                <img src="assets/img/all-images/testimonial-img4.png" alt="">
+                <img src="assets/images/testimonial-img4.png" alt="">
                </div>
              </div>
            </div>
