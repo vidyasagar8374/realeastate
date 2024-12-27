@@ -59,7 +59,8 @@
       <div class="col-lg-10 m-auto">
         <div class="header-images text-center">
           <div class="img1" data-aos="fade-down" data-aos-duration="1200">
-            <img src="assets/img/all-images/header-img1.png" alt="">
+            <img src="assets/images/header-img1.png" alt="">
+            <!-- <img src="assets/images/home-banner-image.jpg" alt=""> -->
           </div>
           <p class="aniamtion-key-1"><img src="assets/img/icons/logo-icon.svg" alt="">100+ New Home Ready</p>
 
