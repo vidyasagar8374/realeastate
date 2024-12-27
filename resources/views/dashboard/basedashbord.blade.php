@@ -56,10 +56,6 @@
         <ul>
             <li><i class="bi bi-speedometer2"></i>Dashboard</li>
             <li><i class="bi bi-building-add"></i><a href="{{ route('admin.addproperty') }}"> Add Property</a></li>
-            <li><i class="bi bi-building-add"></i><a href="{{ route('admin.specification') }}"> Add Keys</a></li>
-            <li><i class="bi bi-building-add"></i><a href="{{ route('admin.Amenties') }}"> Amenties</a></li>
-            <li><i class="bi bi-building-add"></i><a href="{{ route('admin.floorplans') }}"> Floor-plans</a></li>
-            <li><i class="bi bi-building-add"></i><a href="{{ route('admin.media') }}"> Media</a></li>
             <li><i class="bi bi-box-arrow-right"></i>Logout</li>
         </ul>
     </div>

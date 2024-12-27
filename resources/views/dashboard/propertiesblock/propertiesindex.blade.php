@@ -74,35 +74,35 @@
     const modalContent = `
       <div class="container">
       <p>Property ID: ${propertyId}</p>
-        <div class="row">
-            <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+        <div class="row gap-1">
+            <div class="col-lg-3 col-md-12 col-xs-6 unstyled-link">
                 <div class=""> <a href="${detailsUrl}" class="btn btn-link" target="_blank">
                   <i class="bi bi-house d-block"></i>View
                  </a></div>  
             </div>
-            <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+            <div class="col-lg-3 col-md-12 col-xs-6 unstyled-link">
                 <div class=""> <a href="${propertyAmenitiesdetail}" class="btn btn-link" target="_blank">
                   <i class="bi bi-list-check d-block"></i>Ammenities
                  </a></div> 
             </div>
-            <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+            <div class="col-lg-3 col-md-12 col-xs-6 unstyled-link">
                 <div class=""> 
                 <a href="${videourUrl}" class="btn btn-link" target="_blank">
                   <i class="bi bi-play-circle d-block"></i>video
                  </a>
                  </div> 
             </div>
-            <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+            <div class="col-lg-3 col-md-12 col-xs-6 unstyled-link">
                 <div class=""> <a href="${imagesUrl}" class="btn btn-link" target="_blank">
                   <i class="bi bi-images d-block"></i>Images
                  </a></div> 
             </div>
-               <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+               <div class="col-lg-3 col-md-12 col-xs-6 unstyled-link">
                 <div class=""> <a href="${floorPlanUrl}" class="btn btn-link" target="_blank">
                   <i class="bi bi-images d-block"></i>Planning
                  </a></div> 
             </div>
-              <div class="col-lg-2 col-md-12 col-xs-6 unstyled-link m-1">
+              <div class="col-lg-3 col-md-12 col-xs-6 unstyled-link">
                 <div class=""> <a href="${specificationsUrl}" class="btn btn-link" target="_blank">
                   <i class="bi bi-images d-block"></i>Specifications
                  </a></div> 

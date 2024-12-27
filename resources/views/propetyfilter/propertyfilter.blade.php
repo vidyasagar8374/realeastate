@@ -80,6 +80,23 @@
                 margin-bottom: 5px;
                 height: 234px;
             }
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                .listing-card {
+                            margin-bottom: 5px;
+                            height: auto;
+                        }
+            }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+                @media only screen and (min-width: 600px) {
+                    .listing-card {
+                                margin-bottom: 5px;
+                                height: auto;
+                            }
+                }
+
+          
             .listing-card-placeholder{
               margin-bottom: 1px;
                 height: 240px;
@@ -130,12 +147,34 @@
                     display: none;
                 }
             }
+            /* Tablets and mobile devices in portrait orientation */
+                @media (max-width: 991px) {
+                /* Styles for tablets and smaller screens */
+                .filter-icon {
+                    display: block;
+                }
+                }
             /* Show the sidebar on larger screens */
             @media (min-width: 768px) {
                 .sidebar {
                     display: block;
                 }
             }
+            @media (max-width: 991px) {
+                /* Styles for tablets and smaller screens */
+                .sidebar {
+                    display: none;
+                }
+                }
+           /* Tablets and mobile devices in portrait orientation */
+                @media (min-width: 1200px) {
+                /* Styles for tablets and smaller screens */
+                    .sidebar {
+                        display: block;
+                    }
+                }
+
+
             /* Main Content Margin Adjust */
             .main-content {
                 margin-left: 0; /* No sidebar space on mobile */
@@ -145,6 +184,13 @@
                     margin-left: 290px; /* Space for sidebar on larger screens */
                 }
             }
+            @media (max-width: 991px) {
+                /* Styles for tablets and smaller screens */
+                .main-content {
+                    margin-left: 0px; /* Space for sidebar on larger screens */
+                }
+            }
+         
             /* Skeleton Loading Animation */
             /* Add a light gray background to simulate the loading effect */
             .skeleton-text {
@@ -207,7 +253,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Sidebar Filters -->
-                <aside class="sidebar col-md-2" id="sidebar">
+                <aside class="sidebar col-lg-2" id="sidebar">
                     <h5>Filters</h5>
                     <!-- Price Filter -->
                     <div class="side-bar-inner">
@@ -298,7 +344,7 @@
                 </aside>
 
                 <!-- Main Content / Scrollable Listing Cards -->
-                <main class="main-content col-md-8">
+                <main class="main-content col-lg-8">
                     <div class="scrollable-listings">
                         <!-- Repeat this block for multiple listings -->
 
