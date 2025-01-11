@@ -34,12 +34,12 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="img1 image-anime reveal">
                     <img src="{{ asset('assets/img/all-images/single-img1.png') }}" alt="" />
                 </div>
             </div>
-            <div class="col-lg-6">
+            <!-- <div class="col-lg-6">
                 <div class="images-area">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="row">
@@ -95,8 +95,88 @@
                     </p>
                     <div class="space50 d-lg-block d-none"></div>
                     <div class="space30 d-lg-none d-block"></div>
+                         <!-- ==================== gallery images ==================== -->
+                 <div class="container">
+                    <!-- gallery images -->
+                    <div class="col-lg-12 pt-3 pb-3">
+                        <h2>Images</h2>
+                        <div class="space24"></div>
+                    </div>
+                    <div class="swiper-container-wrapper" style="position: relative;">
+                                        <swiper-container
+                                            navigation="true"
+                                            space-between="10"
+                                            speed="500"
+                                            loop="true"
+                                            css-mode="true"
+                                            breakpoints='{
+                                          "320": {"slidesPerView": 1},
+                                          "640": {"slidesPerView": 2},
+                                          "1024": {"slidesPerView": 2}
+                                      }'
+                                        >
+                                            <div class="swiper-slide">
+                                                <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                                            </div>
+                                        </swiper-container>
+                                    </div>   
+
+                </div>
+                <!-- ==================== end gallery images ==================== -->
+                    <!-- =================key features area================ -->
+                    <div class="space50 d-lg-block d-none"></div>
+                    <div class="space30 d-lg-none d-block"></div>
                     <h3>Key Features</h3>
-                    <div class="boxarea">
+                    <div class="space24"></div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table table-striped">
+                                <!-- <thead>
+                                    <tr>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                    </tr>
+                                </thead> -->
+                                <tbody>
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                    <!-- <div class="boxarea">
                         <div class="icons">
                             <img src="{{ asset('assets/img/icons/location1.svg') }}" alt="" />
                         </div>
@@ -175,74 +255,16 @@
                     <p>
                         Located in the trendy Calishire neighborhood, this apartment is perfectly positioned to enjoy all that San Francisco has to offer. From world-class restaurants and boutiques to cultural landmarks and green spaces,
                         everything you need is just a short walk or ride away. Excellent public transport links make commuting a breeze, whether you're headed to the Financial District, SOMA, or beyond.
-                    </p>
+                    </p> -->
                 </div>
-                <!-- ==================== facilities ==================== -->
-
-                <!-- ==================== end facilities ==================== -->
-                <!-- ==========================specifications========================== -->
-                <div class="specification pt-3 pb-3">
-                    <h3>Specifications</h3>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="col-lg-6">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- ==========================End specifications========================== -->
-
+            <!-- =================End key features area================ -->
                 <!-- =========================accordion start========================= -->
                 <!-- accordion with no border -->
                 <div class="mt-5 mb-5">
                     <!-- header -->
-
                     <div class="col-lg-12 pt-3 pb-3">
                         <h2>Floor Plans</h2>
+                        <div class="space24"></div>
                     </div>
                     <!-- end header -->
                     <div class="accordion" id="accordionExample">
@@ -303,22 +325,19 @@
                 <!-- =========================accordion End========================= -->
 
                 <!-- =========================video section start========================== -->
-                <div class="container my-5">
-                    <!-- Video Thumbnail -->
-                    <div id="videoThumbnail" class="video-thumbnail">
-                        <img src="https://via.placeholder.com/600x350.png?text=Video+Thumbnail" alt="Video Thumbnail" />
-                        <div class="play-icon"></div>
-                    </div>
 
-                    <!-- Video Player -->
-                    <div id="videoContainer" class="video-container">
-                        <button id="closeBtn" class="close-btn">&times;</button>
-                        <!-- Video.js Player -->
-                        <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto" width="600" height="350">
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
+                <div class="col-lg-12 pt-3 pb-3">
+                        <h2>Watch video for more details</h2>
+                        <div class="space24"></div>
+                </div>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
 
                 <!-- =========================End video section start========================== -->
@@ -582,29 +601,5 @@
 </div>
 <!--===== CTA AREA ENDS =======-->
 
-<script>
-    // Elements
-    const videoThumbnail = document.getElementById("videoThumbnail");
-    const videoContainer = document.getElementById("videoContainer");
-    const videoPlayer = document.getElementById("videoPlayer");
-    const closeBtn = document.getElementById("closeBtn");
 
-    // Initialize Video.js (Optional)
-    const player = videojs(videoPlayer);
-
-    // Show video player and hide thumbnail
-    videoThumbnail.addEventListener("click", () => {
-        alert("Video clicked!");
-        videoThumbnail.style.display = "none";
-        videoContainer.style.display = "block";
-        player.play(); // Play the video
-    });
-
-    // Hide video player and show thumbnail
-    closeBtn.addEventListener("click", () => {
-        player.pause(); // Pause the video
-        videoContainer.style.display = "none";
-        videoThumbnail.style.display = "block";
-    });
-</script>
 @endsection

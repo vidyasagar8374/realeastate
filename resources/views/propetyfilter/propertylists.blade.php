@@ -1,62 +1,62 @@
 @foreach($properties as $data)
-
-<div class="card listing-card">
-    <div class="row">
-        <!-- Image Section -->
-
-        <div class="col-md-4 property-image">
-        <a href="{{ route('properties.singleproperty' , ['id' => $data->id]) }}">
-            <img src="{{  asset($data->property_sm_img)  }}" alt="Property Image" class="img-fluid rounded" />
-        </a>
-        </div>
-        <!-- Details Section -->
-        <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title">{{ $data->title }}</h5>
-                <p >{{ $data->subtitle }}</p>
-                <!-- Price and EMI -->
-                <div class="price-section">
-                    <div>
-                        <h6>₹39 Lacs</h6>
-                        <small>₹4,588 per sq.ft.</small>
-                    </div>
-                    <div>
-                        <h6>₹22,352/Month</h6>
-                        <small>Estimated EMI</small>
-                    </div>
-                    <div>
-                        <h6>850 sqft</h6>
-                        <small>Builtup Area</small>
-                    </div>
-                </div>
-
-                <!-- Property Details -->
-                <div class="details-section mt-1 mb-1">
-                    <div>
-                        <strong><i class="bi bi-compass"></i> East</strong><br />
-                        Facing
-                    </div>
-                    <div>
-                        <strong><i class="bi bi-building"></i> 1 BHK</strong><br />
-                        Apartment Type
-                    </div>
-                    <div>
-                        <strong><i class="bi bi-droplet"></i> 1</strong><br />
-                        Bathrooms
-                    </div>
-                    <div>
-                        <strong><i class="bi bi-car-front"></i> None</strong><br />
-                        Parking
-                    </div>
-                </div>
-
-                <!-- Action Button -->
-                <div class="action-section mb-1">
-                    <a href="#" class="btn btn-danger btn-sm">Get Owner Details</a>
-                    <a href="#" class="btn btn-outline-secondary btn-sm">Join Visit</a>
-                </div>
-            </div>
-        </div>
+<div class="container mt-2">
+  <div class="property-card row">
+    <!-- Image Section -->
+    <div class="card-image col-md-5">
+      <img src="https://via.placeholder.com/150" alt="House Image">
+      <!-- <button class="request-photos">Request Photos</button> -->
     </div>
+
+    <!-- Text Content Section -->
+    <div class="col-md-7 p-1">
+     <h5 class="fw-bold">Standalone Apartment</h5>
+     <p class="text-muted">2 BHK Flat in Manikonda, Hyderabad</p>
+        <div class="row">
+            <div class="col-4 pb-1">
+                  <!-- Price Info -->
+                <div class="price-info">
+                    <span>₹45 Lac</span>
+                    <span>₹5,000/sqft</span>
+                </div>
+
+            </div>
+            <div class="col-4 pb-1">
+
+                         <!-- Additional Details -->
+                    <div class="details">
+                        <p>83.61 sqft</p>
+                       
+                    </div>
+            </div>
+            <div class="col-4 pb-1"></div>
+        </div>
+        <!-- Additional Details -->
+        <span class="text-truncate-custom" id="text-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem non dolor tempora? 
+        <span id="toggle-btn" class="clickable-ellipsis">...</span>
+        </span>
+        <!-- Additional Details -->
+      <!-- Contact Buttons -->
+      <div class="contact-buttons d-flex gap-1">
+         <p class="text-muted small">2mo ago • Owner</p>
+            <button type="button" class="btn  btn-outline-primary btn-sm">Small button</button>
+            <button type="button" class="btn btn-primary btn-sm">Small button</button>
+      </div>
+    </div>
+  </div>
 </div>
+
+ <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const textContent = document.getElementById('text-content');
+  const toggleEllipsis = document.getElementById('toggle-btn');
+
+  toggleEllipsis.addEventListener('click', () => {
+    const isTruncated = textContent.classList.toggle('text-truncate-custom');
+    toggleEllipsis.textContent = isTruncated ? '...' : ' Read Less';
+  });
+});
+
+</script>
+
 @endforeach

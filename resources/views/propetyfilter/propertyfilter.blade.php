@@ -4,10 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Real Estate Listing with Scrollable Sidebar</title>
-        <!-- Bootstrap 5 CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+                <!-- Bootstrap Select CSS (Optional) -->
+                <!-- Bootstrap CSS -->
+                <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+                <!-- Bootstrap Select CSS -->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css" rel="stylesheet">
+
+                <!-- jQuery -->
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
         <!-- Bootstrap Icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
         <style>
             body {
                 margin: 0;
@@ -78,7 +87,7 @@
 
             .listing-card {
                 margin-bottom: 5px;
-                height: 234px;
+                height: 234px !important;
             }
             /* Extra small devices (phones, 600px and down) */
             @media only screen and (max-width: 600px) {
@@ -246,6 +255,62 @@
                 z-index: 999; /* Below sidebar */
             }
 
+
+
+
+            /* new card stles */
+     .property-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 723px;
+      margin: auto;
+    }
+    .card-image {
+      position: relative;
+      background: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+    }
+    .card-image img {
+      max-height: 150px;
+    }
+    .request-photos {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+    .request-photos:hover {
+      background: #0056b3;
+    }
+   
+    
+    .text-truncate-custom {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-width: 200px; /* Adjust as needed */
+        }
+
+        .clickable-ellipsis {
+        cursor: pointer;
+        color: blue; /* Optional: Gives a clickable look */
+        text-decoration: underline; /* Optional: Makes it appear like a link */
+        margin-left: 5px; /* Optional: Adds spacing between text and ellipsis */
+        }
+
+
+ 
+            /* new card stles */
                 
 </style>
     </head>
@@ -253,7 +318,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Sidebar Filters -->
-                <aside class="sidebar col-lg-2" id="sidebar">
+                <aside class="sidebar col-lg-3" id="sidebar">
                     <h5>Filters</h5>
                     <!-- Price Filter -->
                     <div class="side-bar-inner">
@@ -262,9 +327,9 @@
                             <!-- Location Filter -->
                             <div class="mb-3">
                                 <label class="form-label">Location</label>
-                                <select class="form-select" id="location">
-                                    <option value=""></option>
-                                    <option value="hyderabad">Hyderabad</option>
+                          
+                                <select class="selectpicker" id="location" multiple data-live-search="true">
+                                <option value="hyderabad">Hyderabad</option>
                                     <option value="gachibowli">Gachibowli</option>
                                     <option value="kukatpally">Kukatpally</option>
                                     <option value="miyapur">Miyapur</option>
@@ -344,7 +409,7 @@
                 </aside>
 
                 <!-- Main Content / Scrollable Listing Cards -->
-                <main class="main-content col-lg-8">
+                <main class="main-content col-lg-7">
                     <div class="scrollable-listings">
                         <!-- Repeat this block for multiple listings -->
 
@@ -528,9 +593,17 @@
         <button class="filter-icon" onclick="toggleSidebar()">
             <i class="bi bi-funnel"></i>
         </button>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+         <!-- Bootstrap JS -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Bootstrap Select JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js"></script>
+        <!-- Bootstrap Select JS (Optional) -->
+
         <script>
+                $(document).ready(function() {
+                $('.selectpicker').selectpicker();
+            });
             function toggleSidebar() {
                 const sidebar = document.getElementById("sidebar");
                 const overlay = document.getElementById("overlay");
@@ -592,6 +665,8 @@
                     });
                 });
             });
+
+        
         </script>
     </body>
 </html>
